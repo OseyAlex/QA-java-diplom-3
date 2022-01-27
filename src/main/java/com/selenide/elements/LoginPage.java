@@ -1,11 +1,9 @@
-package com.selenide_elements;
+package com.selenide.elements;
 
 import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
-
-import static com.codeborne.selenide.Selenide.sleep;
 
 public class LoginPage {
 
@@ -50,7 +48,6 @@ public class LoginPage {
         emailField.setValue(email);
         passwordField.setValue(password);
         sighInButton.click();
-        sleep(300);
         return this;
     }
 }

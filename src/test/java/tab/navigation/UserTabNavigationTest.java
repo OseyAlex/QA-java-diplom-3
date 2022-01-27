@@ -1,10 +1,9 @@
-package tab_navigation_tests;
+package tab.navigation;
 
 import com.UserOperations;
-import com.codeborne.selenide.Configuration;
-import com.selenide_elements.LoginPage;
-import com.selenide_elements.MainPage;
-import com.selenide_elements.ProfilePage;
+import com.selenide.elements.LoginPage;
+import com.selenide.elements.MainPage;
+import com.selenide.elements.ProfilePage;
 import io.qameta.allure.junit4.DisplayName;
 import org.junit.After;
 import org.junit.Before;
@@ -17,6 +16,7 @@ import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.Selenide.page;
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 import static org.junit.Assert.assertEquals;
+import static scripts.SetBrowserProperty.setBrowserProperty;
 
 public class UserTabNavigationTest {
 
@@ -25,8 +25,7 @@ public class UserTabNavigationTest {
 
     @Before
     public void setUp() {
-        //System.setProperty("webdriver.chrome.driver", "src/main/resources/yandexdriver.exe");
-        Configuration.startMaximized = true;
+        setBrowserProperty();
         credentials = createNewUser.register();
     }
 

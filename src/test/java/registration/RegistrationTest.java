@@ -1,28 +1,24 @@
-package registration_test;
+package registration;
 
-import com.codeborne.selenide.Configuration;
-
-import com.data_generators.UserDataGenerator;
-import com.selenide_elements.LoginPage;
-import com.selenide_elements.MainPage;
-import com.selenide_elements.RegisterPage;
+import com.generator.UserDataGenerator;
+import com.selenide.elements.LoginPage;
+import com.selenide.elements.MainPage;
+import com.selenide.elements.RegisterPage;
 import io.qameta.allure.junit4.DisplayName;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-
 import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.Selenide.page;
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 import static org.junit.Assert.assertEquals;
+import static scripts.SetBrowserProperty.setBrowserProperty;
 
 public class RegistrationTest {
     @Before
     public void setUp() {
-        //System.setProperty("webdriver.chrome.driver", "src/main/resources/yandexdriver.exe");
-        Configuration.startMaximized = true;
-
+        setBrowserProperty();
     }
 
     @After

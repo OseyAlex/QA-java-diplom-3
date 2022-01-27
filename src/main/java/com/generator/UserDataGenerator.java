@@ -1,4 +1,4 @@
-package com.data_generators;
+package com.generator;
 
 import com.github.javafaker.Faker;
 
